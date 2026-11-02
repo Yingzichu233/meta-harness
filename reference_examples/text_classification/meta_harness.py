@@ -106,9 +106,14 @@ def _handle_signal(signum, frame):
 
 def run_cmd(cmd, timeout=7200, cwd=None):
     """Wraps subprocess.run; returns CompletedProcess with returncode=124 on timeout."""
+    return run_cmd_env(cmd, timeout=timeout, cwd=cwd, env=None)
+
+
+def run_cmd_env(cmd, timeout=7200, cwd=None, env=None):
+    """Wraps subprocess.run with optional env override."""
     try:
         return subprocess.run(
-            cmd, cwd=cwd, timeout=timeout, capture_output=True, text=True
+            cmd, cwd=cwd, timeout=timeout, capture_output=True, text=True, env=env
         )
     except subprocess.TimeoutExpired:
         return subprocess.CompletedProcess(
@@ -161,6 +166,24 @@ def count_iterations_from_summary():
     return max_iter
 
 
+def propose(task_prompt, iteration, timeout=2400):
+    """Dispatch to the proposer selected by MH_PROPOSER (default: claude)."""
+    if os.environ.get("MH_PROPOSER", "claude") == "deepseek":
+        import deepseek_proposer
+
+        try:
+            return deepseek_proposer.run(
+                task_prompt=task_prompt,
+                iteration=iteration,
+                logs_dir=LOGS_DIR,
+                pending_eval=PENDING_EVAL,
+            )
+        except Exception as e:
+            print(f"  {_red('proposer failed')} {type(e).__name__}: {e}")
+            return False
+    return propose_claude(task_prompt, iteration, timeout=timeout)
+
+
 def propose_claude(task_prompt, iteration, timeout=2400):
     """Returns True if candidates were produced (pending_eval.json exists)."""
     os.environ.pop("CLAUDECODE", None)
@@ -194,7 +217,11 @@ def validate_candidates(candidates):
     valid = []
     for c in candidates:
         name = c["name"]
-        result = run_cmd(
+        # Run from EVOLVE_DIR so `uv run` resolves this project's venv
+        # (running from the parent dir finds no pyproject and misses deps),
+        # with PYTHONPATH=.. so `text_classification` is importable.
+        env = dict(os.environ, PYTHONPATH=str(EVOLVE_DIR.parent))
+        result = run_cmd_env(
             [
                 "uv",
                 "run",
@@ -202,8 +229,9 @@ def validate_candidates(candidates):
                 "-c",
                 f"from text_classification.agents.{name} import *; print('OK')",
             ],
-            cwd=str(EVOLVE_DIR.parent),
-            timeout=30,
+            cwd=str(EVOLVE_DIR),
+            timeout=60,
+            env=env,
         )
         if result.returncode == 0 and "OK" in result.stdout:
             print(f"    {_green('OK')} {name}")
@@ -470,7 +498,7 @@ def run_evolve(args):
         # Propose
         propose_start = time.time()
         print(f"  {_ts()} {_cyan('proposing')} new candidates...", flush=True)
-        ok = propose_claude(task_prompt, iteration, timeout=args.propose_timeout)
+        ok = propose(task_prompt, iteration, timeout=args.propose_timeout)
         propose_time = time.time() - propose_start
 
         if not ok:
