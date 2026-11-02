@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "started_at": "2026-11-03T02:46:35.213137",
+  "systems": [
+    "behavioural_dedupe_cache",
+    "calibrated_adaptive_reuse",
+    "contrastive_pair_memory",
+    "fewshot_all",
+    "local_augmentation_memory",
+    "no_memory",
+    "straddle_coverage_bank"
+  ],
+  "completed_at": "2026-11-03T02:48:27.033120"
+}

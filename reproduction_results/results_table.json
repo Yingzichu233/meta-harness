@@ -1,0 +1,130 @@
+{
+  "model": "deepseek-chat",
+  "datasets": [
+    "USPTO",
+    "Symptom2Disease",
+    "LawBench"
+  ],
+  "systems": {
+    "contrastive_pair_memory": {
+      "Symptom2Disease_val": 84.0,
+      "Symptom2Disease_val_ctx": 3620,
+      "USPTO_val": 43.3,
+      "USPTO_val_ctx": 3707,
+      "LawBench_val": 54.0,
+      "LawBench_val_ctx": 5115,
+      "Symptom2Disease_test": 87.3,
+      "USPTO_test": 32.0,
+      "LawBench_test": 51.0
+    },
+    "calibrated_adaptive_reuse": {
+      "Symptom2Disease_val": 80.0,
+      "Symptom2Disease_val_ctx": 4190,
+      "USPTO_val": 50.0,
+      "USPTO_val_ctx": 6002,
+      "LawBench_val": 58.0,
+      "LawBench_val_ctx": 7904,
+      "Symptom2Disease_test": 86.8,
+      "USPTO_test": 31.0,
+      "LawBench_test": 55.0
+    },
+    "straddle_coverage_bank": {
+      "Symptom2Disease_val": 92.0,
+      "Symptom2Disease_val_ctx": 19107,
+      "USPTO_val": 46.7,
+      "USPTO_val_ctx": 10820,
+      "LawBench_val": 58.0,
+      "LawBench_val_ctx": 24366,
+      "Symptom2Disease_test": 85.4,
+      "USPTO_test": 33.0,
+      "LawBench_test": 59.0
+    },
+    "local_augmentation_memory": {
+      "Symptom2Disease_val": 78.0,
+      "Symptom2Disease_val_ctx": 3261,
+      "USPTO_val": 30.0,
+      "USPTO_val_ctx": 3325,
+      "LawBench_val": 44.0,
+      "LawBench_val_ctx": 3387,
+      "Symptom2Disease_test": 81.1,
+      "USPTO_test": 29.0,
+      "LawBench_test": 51.0
+    },
+    "answer_signature_digest": {
+      "Symptom2Disease_val": 84.0,
+      "Symptom2Disease_val_ctx": 8129,
+      "USPTO_val": 16.7,
+      "USPTO_val_ctx": 11006,
+      "LawBench_val": 28.0,
+      "LawBench_val_ctx": 26379
+    },
+    "no_memory": {
+      "Symptom2Disease_val": 76.0,
+      "Symptom2Disease_val_ctx": 191,
+      "USPTO_val": 26.7,
+      "USPTO_val_ctx": 191,
+      "LawBench_val": 30.0,
+      "LawBench_val_ctx": 191,
+      "Symptom2Disease_test": 69.3,
+      "USPTO_test": 16.0,
+      "LawBench_test": 34.0
+    },
+    "balanced_exemplar_bank": {
+      "Symptom2Disease_val": 84.0,
+      "Symptom2Disease_val_ctx": 12523,
+      "USPTO_val": 46.7,
+      "USPTO_val_ctx": 8847,
+      "LawBench_val": 50.0,
+      "LawBench_val_ctx": 22465
+    },
+    "label_catalogue_memory": {
+      "Symptom2Disease_val": 82.0,
+      "Symptom2Disease_val_ctx": 4685,
+      "USPTO_val": 10.0,
+      "USPTO_val_ctx": 6670,
+      "LawBench_val": 28.0,
+      "LawBench_val_ctx": 9160
+    },
+    "fewshot_all": {
+      "Symptom2Disease_val": 82.0,
+      "Symptom2Disease_val_ctx": 30145,
+      "USPTO_val": 46.7,
+      "USPTO_val_ctx": 8897,
+      "LawBench_val": 58.0,
+      "LawBench_val_ctx": 29106,
+      "Symptom2Disease_test": 86.8,
+      "USPTO_test": 30.0,
+      "LawBench_test": 58.0
+    },
+    "similarity_cluster_hierarchy": {
+      "Symptom2Disease_val": 70.0,
+      "Symptom2Disease_val_ctx": 4775,
+      "USPTO_val": 40.0,
+      "USPTO_val_ctx": 9746,
+      "LawBench_val": 40.0,
+      "LawBench_val_ctx": 6105
+    },
+    "straddle_arrival_order": {
+      "Symptom2Disease_val": 80.0,
+      "Symptom2Disease_val_ctx": 18025,
+      "USPTO_val": 46.7,
+      "USPTO_val_ctx": 10820,
+      "LawBench_val": 58.0,
+      "LawBench_val_ctx": 24341,
+      "Symptom2Disease_test": 85.4,
+      "USPTO_test": 33.0,
+      "LawBench_test": 58.0
+    },
+    "behavioural_dedupe_cache": {
+      "Symptom2Disease_val": 36.0,
+      "Symptom2Disease_val_ctx": 2731,
+      "USPTO_val": 46.7,
+      "USPTO_val_ctx": 2734,
+      "LawBench_val": 52.0,
+      "LawBench_val_ctx": 2896,
+      "Symptom2Disease_test": 36.8,
+      "USPTO_test": 30.0,
+      "LawBench_test": 53.0
+    }
+  }
+}

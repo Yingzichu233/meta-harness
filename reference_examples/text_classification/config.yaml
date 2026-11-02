@@ -30,7 +30,7 @@ models:
 # Benchmark sweep settings
 benchmark:
   seeds: [42]              # multi-seed: [42, 123, 456]
-  concurrency: 16
+  concurrency: 8
 
 # Datasets to test
 datasets:

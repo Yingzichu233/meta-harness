@@ -1,0 +1,188 @@
+{
+  "Symptom2Disease": {
+    "contrastive_pair_memory": {
+      "accuracy": 0.84,
+      "memory_context_chars": 3620.0,
+      "model": "deepseek-chat"
+    },
+    "calibrated_adaptive_reuse": {
+      "accuracy": 0.8,
+      "memory_context_chars": 4190.0,
+      "model": "deepseek-chat"
+    },
+    "straddle_coverage_bank": {
+      "accuracy": 0.92,
+      "memory_context_chars": 19107.0,
+      "model": "deepseek-chat"
+    },
+    "local_augmentation_memory": {
+      "accuracy": 0.78,
+      "memory_context_chars": 3261.0,
+      "model": "deepseek-chat"
+    },
+    "answer_signature_digest": {
+      "accuracy": 0.84,
+      "memory_context_chars": 8129.0,
+      "model": "deepseek-chat"
+    },
+    "no_memory": {
+      "accuracy": 0.76,
+      "memory_context_chars": 191.0,
+      "model": "deepseek-chat"
+    },
+    "balanced_exemplar_bank": {
+      "accuracy": 0.84,
+      "memory_context_chars": 12523.0,
+      "model": "deepseek-chat"
+    },
+    "label_catalogue_memory": {
+      "accuracy": 0.82,
+      "memory_context_chars": 4685.0,
+      "model": "deepseek-chat"
+    },
+    "fewshot_all": {
+      "accuracy": 0.82,
+      "memory_context_chars": 30145.0,
+      "model": "deepseek-chat"
+    },
+    "similarity_cluster_hierarchy": {
+      "accuracy": 0.7,
+      "memory_context_chars": 4775.0,
+      "model": "deepseek-chat"
+    },
+    "straddle_arrival_order": {
+      "accuracy": 0.8,
+      "memory_context_chars": 18025.0,
+      "model": "deepseek-chat"
+    },
+    "behavioural_dedupe_cache": {
+      "accuracy": 0.36,
+      "memory_context_chars": 2731.0,
+      "model": "deepseek-chat"
+    }
+  },
+  "USPTO": {
+    "contrastive_pair_memory": {
+      "accuracy": 0.43333333333333335,
+      "memory_context_chars": 3707.0,
+      "model": "deepseek-chat"
+    },
+    "calibrated_adaptive_reuse": {
+      "accuracy": 0.5,
+      "memory_context_chars": 6002.0,
+      "model": "deepseek-chat"
+    },
+    "straddle_coverage_bank": {
+      "accuracy": 0.4666666666666667,
+      "memory_context_chars": 10820.0,
+      "model": "deepseek-chat"
+    },
+    "local_augmentation_memory": {
+      "accuracy": 0.3,
+      "memory_context_chars": 3325.0,
+      "model": "deepseek-chat"
+    },
+    "answer_signature_digest": {
+      "accuracy": 0.16666666666666666,
+      "memory_context_chars": 11006.0,
+      "model": "deepseek-chat"
+    },
+    "no_memory": {
+      "accuracy": 0.26666666666666666,
+      "memory_context_chars": 191.0,
+      "model": "deepseek-chat"
+    },
+    "balanced_exemplar_bank": {
+      "accuracy": 0.4666666666666667,
+      "memory_context_chars": 8847.0,
+      "model": "deepseek-chat"
+    },
+    "label_catalogue_memory": {
+      "accuracy": 0.1,
+      "memory_context_chars": 6670.0,
+      "model": "deepseek-chat"
+    },
+    "fewshot_all": {
+      "accuracy": 0.4666666666666667,
+      "memory_context_chars": 8897.0,
+      "model": "deepseek-chat"
+    },
+    "similarity_cluster_hierarchy": {
+      "accuracy": 0.4,
+      "memory_context_chars": 9746.0,
+      "model": "deepseek-chat"
+    },
+    "straddle_arrival_order": {
+      "accuracy": 0.4666666666666667,
+      "memory_context_chars": 10820.0,
+      "model": "deepseek-chat"
+    },
+    "behavioural_dedupe_cache": {
+      "accuracy": 0.4666666666666667,
+      "memory_context_chars": 2734.0,
+      "model": "deepseek-chat"
+    }
+  },
+  "LawBench": {
+    "contrastive_pair_memory": {
+      "accuracy": 0.54,
+      "memory_context_chars": 5115.0,
+      "model": "deepseek-chat"
+    },
+    "calibrated_adaptive_reuse": {
+      "accuracy": 0.58,
+      "memory_context_chars": 7904.0,
+      "model": "deepseek-chat"
+    },
+    "straddle_coverage_bank": {
+      "accuracy": 0.58,
+      "memory_context_chars": 24366.0,
+      "model": "deepseek-chat"
+    },
+    "local_augmentation_memory": {
+      "accuracy": 0.44,
+      "memory_context_chars": 3387.0,
+      "model": "deepseek-chat"
+    },
+    "answer_signature_digest": {
+      "accuracy": 0.28,
+      "memory_context_chars": 26379.0,
+      "model": "deepseek-chat"
+    },
+    "no_memory": {
+      "accuracy": 0.3,
+      "memory_context_chars": 191.0,
+      "model": "deepseek-chat"
+    },
+    "balanced_exemplar_bank": {
+      "accuracy": 0.5,
+      "memory_context_chars": 22465.0,
+      "model": "deepseek-chat"
+    },
+    "label_catalogue_memory": {
+      "accuracy": 0.28,
+      "memory_context_chars": 9160.0,
+      "model": "deepseek-chat"
+    },
+    "fewshot_all": {
+      "accuracy": 0.58,
+      "memory_context_chars": 29106.0,
+      "model": "deepseek-chat"
+    },
+    "similarity_cluster_hierarchy": {
+      "accuracy": 0.4,
+      "memory_context_chars": 6105.0,
+      "model": "deepseek-chat"
+    },
+    "straddle_arrival_order": {
+      "accuracy": 0.58,
+      "memory_context_chars": 24341.0,
+      "model": "deepseek-chat"
+    },
+    "behavioural_dedupe_cache": {
+      "accuracy": 0.52,
+      "memory_context_chars": 2896.0,
+      "model": "deepseek-chat"
+    }
+  }
+}

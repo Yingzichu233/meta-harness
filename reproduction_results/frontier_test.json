@@ -1,0 +1,49 @@
+{
+  "USPTO": {
+    "best_system": "straddle_coverage_bank",
+    "accuracy": 33.0,
+    "ctx_len": 10820.0
+  },
+  "Symptom2Disease": {
+    "best_system": "contrastive_pair_memory",
+    "accuracy": 87.26415094339622,
+    "ctx_len": 3627.0
+  },
+  "LawBench": {
+    "best_system": "straddle_coverage_bank",
+    "accuracy": 59.0,
+    "ctx_len": 24366.0
+  },
+  "_pareto": [
+    {
+      "system": "straddle_coverage_bank",
+      "test_accuracy": 59.1,
+      "ctx_len": 18097
+    },
+    {
+      "system": "calibrated_adaptive_reuse",
+      "test_accuracy": 57.6,
+      "ctx_len": 6045
+    },
+    {
+      "system": "contrastive_pair_memory",
+      "test_accuracy": 56.8,
+      "ctx_len": 4146
+    },
+    {
+      "system": "local_augmentation_memory",
+      "test_accuracy": 53.7,
+      "ctx_len": 3334
+    },
+    {
+      "system": "behavioural_dedupe_cache",
+      "test_accuracy": 39.9,
+      "ctx_len": 2789
+    },
+    {
+      "system": "no_memory",
+      "test_accuracy": 39.8,
+      "ctx_len": 191
+    }
+  ]
+}
