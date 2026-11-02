@@ -310,7 +310,7 @@ class LLM:
         else:
             self.temperature = 0.0
 
-        if api_base is not None and not self.is_gpt_oss and max_tokens > 4096:
+        if not self.is_gpt_oss and max_tokens > 4096:
             max_tokens = 4096
         self.max_tokens = max_tokens
 
@@ -323,6 +323,12 @@ class LLM:
 
         if api_base is None and max_workers > 4:
             max_workers = 4
+        if api_key is None and api_base is not None:
+            api_key = (
+                os.environ.get("LLM_API_KEY")
+                or os.environ.get("DEEPSEEK_API_KEY")
+                or os.environ.get("OPENAI_API_KEY")
+            )
         self._provider = ProviderLLM(
             model=model,
             max_concurrent=max_workers,
