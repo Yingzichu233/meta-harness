@@ -20,10 +20,12 @@ inner_loop:
 
 # Models to test
 models:
-  - model: openrouter/openai/gpt-oss-120b
-  # To use a custom OpenAI-compatible endpoint instead, switch to e.g.:
-  # - model: gpt-oss-120b
-  #   api_base: https://your-api-host/v1
+  # Paper default (requires OpenRouter key):
+  # - model: openrouter/openai/gpt-oss-120b
+  # Reproduction with DeepSeek (Edge case A model swap), key read from
+  # DEEPSEEK_API_KEY env var:
+  - model: deepseek-chat
+    api_base: https://api.deepseek.com/v1
 
 # Benchmark sweep settings
 benchmark:

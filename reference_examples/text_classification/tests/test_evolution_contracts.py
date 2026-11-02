@@ -19,7 +19,7 @@ from text_classification.data.api import _with_context
 
 def _args(**overrides):
     values = {
-        "model": "openrouter/openai/gpt-oss-120b",
+        "model": "deepseek-chat",  # matches the DeepSeek entry in config.yaml
         "run_name": "test-run",
         "fresh": False,
         "skip_baseline": True,
@@ -100,7 +100,7 @@ class HeldOutIsolationTests(unittest.TestCase):
                             meta_harness.RESULTS_DIR,
                             dataset,
                             system,
-                            "gpt-oss-120b",
+                            "deepseek-chat",
                             42,
                         )
                         result_dir.mkdir(parents=True, exist_ok=True)
@@ -166,7 +166,7 @@ class HeldOutIsolationTests(unittest.TestCase):
                             meta_harness.RESULTS_DIR,
                             dataset,
                             system,
-                            "gpt-oss-120b",
+                            "deepseek-chat",
                             42,
                         )
                         result_dir.mkdir(parents=True, exist_ok=True)
