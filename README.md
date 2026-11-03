@@ -1,3 +1,16 @@
+> ## 🎓 FTEC5660 Reproducibility Work — start here
+>
+> **This fork reproduces the paper's text-classification experiment with DeepSeek and adds a selection-mechanism ablation.**
+>
+> - **Install + run steps, setup notes, results:** [`README_REPRODUCTION.md`](README_REPRODUCTION.md)
+> - **Result artifacts:** [`reproduction_results/`](reproduction_results/)
+> - **All changes are in reviewable commits** on branch `reproducibility-deepseek` (endpoint fix → model swap → validation-cwd bug fix → DeepSeek proposer → artifacts)
+> - Key results: searched harness `straddle_coverage_bank` avg val **65.6%** vs best baseline 62.2%; held-out test **59.1%** vs 58.3%; ablation `straddle_arrival_order` −4.0 val
+>
+> The upstream README follows below.
+
+---
+
 # Meta-Harness
 
 ![Meta-Harness](assets/repo.png)
